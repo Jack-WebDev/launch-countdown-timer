@@ -1,0 +1,102 @@
+
+:root {
+  --Grayishblue: hsl(237, 18%, 59%);
+  --Softred: hsl(345, 95%, 68%);
+  --Darkdesaturatedblue: hsl(236, 21%, 26%);
+  --Verydarkblue-700: hsl(235, 16%, 14%);
+  --Verydarkblue-900: hsl(234, 17%, 12%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  background-image: url(./images/bg-stars.svg), url(./images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto;
+  background-color: var(--Verydarkblue-900);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  margin-block: 2rem;
+}
+
+header h1 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+main {
+  margin-block: 3rem;
+}
+
+.countdown__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.countdown__container .countdown__card {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 8px 5px #000;
+  background-color: var(--Darkdesaturatedblue);
+  position: relative;
+}
+
+.countdown__container .countdown__card > h2 {
+  color: var(--Softred);
+  text-align: center;
+}
+
+.countdown__container .countdown__card > p {
+  margin-block-start: 0.3rem;
+  color: var(--Grayishblue);
+  font-weight: 700;
+  font-size: 14px;
+  position: absolute;
+  transform: translate(10px, 30px);
+}
+
+.countdown__container .countdown__card:not(.days) > p {
+  transform: translate(1px, 30px);
+}
+
+footer {
+  margin-block-start: 3rem;
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  transform: translateY(3rem);
+}
+
+footer .socials > img:hover {
+  filter: hue-rotate(120deg) saturate(5);
+}
+
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .countdown__container .countdown__card > p {
+    font-weight: 500;
+    left: 0;
+  }
+}
