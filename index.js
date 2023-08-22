@@ -5,7 +5,7 @@ const minutes = document.querySelector(".minutes h2");
 const seconds = document.querySelector(".seconds h2");
 
 const launchCountDown = () => {
-  const launchDate = new Date("August 12 2023 00:00:00").getTime();
+  const launchDate = new Date("November 12 2023 00:00:00").getTime();
   const currentDate = new Date().getTime();
 
   const countDownTime = launchDate - currentDate;
